@@ -32,7 +32,7 @@ RUN apt-get -yq update && \
         ttf-liberation \
         ttf-unfonts-core \
         ttf-wqy-zenhei \
-        ttf-malayalam-fonts \
+        fonts-smc fonts-samyak-mlym fonts-mlym fonts-lohit-mlym \
     && apt-get -yq autoremove \
     && apt-get -yq clean \
     && rm -rf /var/lib/apt/lists/* \
