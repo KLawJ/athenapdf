@@ -1,5 +1,5 @@
 FROM debian:8.7
-MAINTAINER Arachnys <techteam@arachnys.com>
+MAINTAINER Athul Raj <athul@runacorp.com>
 
 RUN echo 'deb http://httpredir.debian.org/debian/ stable main contrib non-free' >> /etc/apt/sources.list
 
@@ -32,7 +32,10 @@ RUN apt-get -yq update && \
         ttf-liberation \
         ttf-unfonts-core \
         ttf-wqy-zenhei \
-        fonts-smc fonts-samyak-mlym fonts-mlym fonts-lohit-mlym \
+        fonts-smc \
+        fonts-samyak-mlym \
+        fonts-mlym \
+        fonts-lohit-mlym \
     && apt-get -yq autoremove \
     && apt-get -yq clean \
     && rm -rf /var/lib/apt/lists/* \
