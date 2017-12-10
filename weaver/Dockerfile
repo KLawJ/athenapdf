@@ -1,5 +1,5 @@
-FROM arachnysdocker/athenapdf
-MAINTAINER Arachnys <techteam@arachnys.com>
+FROM kljds/athenapdf
+MAINTAINER Athul Raj <athul@runacorp.com>
 
 ENV GIN_MODE release
 
