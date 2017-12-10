@@ -1,9 +1,9 @@
 CLI_DIR ?= cli
-CLI_IMAGE ?= "runacorp/klj/athenapdf"
+CLI_IMAGE ?= "runacorp/kljds/athenapdf"
 CLI_DOCKER_ARTIFACT_DIR ?= "/athenapdf/build/"
 
 SERVICE_DIR ?= weaver
-SERVICE_IMAGE ?= "runacorp/klj/athenapdf-service"
+SERVICE_IMAGE ?= "runacorp/kljds/athenapdf-service"
 SERVICE_DOCKER_ARTIFACT_FILE ?= "/go/src/github.com/KLawJ/athenapdf/weaver"
 
 P="\\033[34m[+]\\033[0m"
@@ -29,7 +29,7 @@ buildcli:
 
 testcli:
 	@echo "  $(P) testcli"
-	@docker run --rm runacorp/klj/athenapdf athenapdf -S https://status.github.com/ | grep -a "PDF-1.4"
+	@docker run --rm runacorp/kljds/athenapdf athenapdf -S https://status.github.com/ | grep -a "PDF-1.4"
 	@echo "<h1>stdin test</h1>" | docker run --rm -i runacorp/klj-athenapdf athenapdf -S - | grep -a "PDF-1.4"
 
 buildservice:
